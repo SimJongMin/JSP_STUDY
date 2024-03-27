@@ -3,7 +3,7 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <jsp:useBean id="ab" scope="page" class="jspbook.addrbook.AddrBean" />
-<jsp:useBean id="addrbook" class="jspbook.addrbook.AddrBean" />
+<jsp:useBean id="addrbook" class="jspbook.addrbook.AddrBook" />
 <jsp:setProperty name="addrbook" property="*" />
 <%
 	String action = request.getParameter("action");
