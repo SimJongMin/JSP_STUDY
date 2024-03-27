@@ -2,7 +2,7 @@
 
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<!-- 에러 -->
+<!-- 에러 테스트 -->
 <jsp:useBean id="ab" scope="page" class="jspbook.addrbook.AddrBean" />
 <jsp:useBean id="addrbook" class="jspbook.addrbook.AddrBean" />
 <jsp:setProperty name="addrbook" property="*" />
