@@ -10,6 +10,11 @@
 	if(action.equals("list")) {
 	}
 	else if(action.equals("insert")) {
+		if (ab.insertDB(addrbook)) {
+			response.sendRedirect("addrbook_control.jsp?action=list");
+		}
+		else
+			throw new Exception("DB 입력 오류");
 	}
 	else if(action.equals("edit")) {
 	}

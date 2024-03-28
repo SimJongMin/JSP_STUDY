@@ -12,6 +12,7 @@
 <hr>
 [<a href=addrbook_list.jsp>주소록 목록으로</a>] <p>
 <form name=form1 method=post action=addrbook_control.jsp>
+<input type=hidden name="action" value="insert">
 <table border="1">
 <tr>
 	<th>이 름</th>
