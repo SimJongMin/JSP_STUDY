@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" errorPage="addrbook_error.jsp" import=java.util.*, jspbook.addrbook.*""%>
 <!DOCTYPE html>
+<jsp:useBean id="datas" scope="request" class="java.util.ArrayList" /> <!-- 빈즈 초기화 -->
 <html>
 <head>
 <link rel="stylesheet" href="addrbook.css" type="text/css" media="screen" />
