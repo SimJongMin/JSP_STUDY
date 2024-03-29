@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" errorPage="addrbook_error.jsp" import=java.util.*, jspbook.addrbook.*""%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" errorPage="addrbook_error.jsp" import="java.util.*, jspbook.addrbook.*"%>
 <jsp:useBean id="datas" scope="request" class="java.util.ArrayList" /> <!-- 빈즈 초기화 -->
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="addrbook.css" type="text/css" media="screen" />
@@ -19,22 +19,21 @@
 <a href="addrbook_form.jsp">주소록 등록</a><p>
 
 <table border="1">
+	<tr bgcolor="#99CCFF" ><th>번호</th><th>이 름</th><th>전화번호</th><th>생 일</th><th>회 사</th><th>메 모</th></tr>
+		<%
+			for(AddrBook ab : (ArrayList<AddrBook>) datas) {	
+		%>
 	<tr>
-		<th>번호</th><th>이름</th><th>전화번호</th><th>생일</th>
-		<th>회사</th><th>메 모</th>
+		<td><a href="javascript:check(<%=ab.getAb_id()%>"><%=ab.getAb_id() %></a></td>
+		<td><%=ab.getAb_name() %></td>
+		<td><%=ab.getAb_tel() %></td>
+		<td><%=ab.getAb_birth() %></td>
+		<td><%=ab.getAb_comdept() %></td>
+		<td><%=ab.getAb_memo() %></td>
 	</tr>
-	<tr>
-		<td><a href="addrbook_edit_form.jsp">1</a></td><td>홍길동</td> <td>010-123-1234</td><td>1995-10-02</td>
-		<td>가천대학교</td><td>IT대학</td>
-	</tr>
-	<tr>
-		<td>2</td><td>홍길동</td><td>010-123-1234</td><td>1995-10-02</td>
-		<td>가천대학교</td><td>IT대학</td>
-	</tr>
-	<tr>
-		<td>3</td><td>홍길동</td><td>010-123-1234</td><td>1995-10-02</td>
-		<td>가천대학교</td><td>IT대학</td>
-	</tr>
+	<%
+			}
+	%>
 </table>
 </form>
 
