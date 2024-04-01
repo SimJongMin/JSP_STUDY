@@ -29,6 +29,11 @@
 		}
 	}
 	else if(action.equals("update")) {
+		if(ab.updateDB(addrbook)) {
+			response.sendRedirect("addrbook_control.jsp?action=list");
+		}
+		else
+			throw new Exception("DB 갱신오류");
 	}
 	else if(action.equals("delete")) {
 		if(ab.deleteDB(addrbook.getAb_id())) {
