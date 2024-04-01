@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" errorPage="addrbook_error.jsp"
 	import="jspbook.addrbook.*"%>
-<jsp:useBean id="ab" scope="requset" class="jspbook.addrbook.AddrBook" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +20,8 @@
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
 <title>주소록:수정화면</title>
 </head>
+
+<jsp:useBean id="ab" scope="requset" class="jspbook.addrbook.AddrBook" />
 
 <body>
 <div align="center">
