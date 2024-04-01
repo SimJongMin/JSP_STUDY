@@ -26,7 +26,7 @@
 <table border="1">
 	<tr bgcolor="#99CCFF" ><th>번호</th><th>이 름</th><th>전화번호</th><th>생 일</th><th>회 사</th><th>메 모</th></tr>
 		<%
-			for(AddrBook ab : (ArrayList<AddrBook>) datas) {
+			for(AddrBook ab : (ArrayList<AddrBook>)datas) {
 		%>
 	<tr>
 		<td><a href="javascript:check(<%=ab.getAb_id()%>"><%=ab.getAb_id() %></a></td>
