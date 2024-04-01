@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" errorPage="addrbook_error.jsp" import="jspbook.addrbook.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" errorPage="addrbook_error.jsp"
+	import="jspbook.addrbook.*,java.util.*"%>
 
 <% request.setCharacterEncoding("UTF-8"); %>
 
@@ -17,6 +19,14 @@
 			throw new Exception("DB 입력 오류");
 	}
 	else if(action.equals("edit")) {
+		AddrBook abook = ab.getDB(addrbook.getAb_id());
+		if(request.getParameter("upasswd") != "1234") {
+			out.println("<script>alert('비밀번호가 틀렸습니다.!!'); history.go(-1);</script>");
+		}
+		else {
+			request.setAttribute("ab", abook);
+			pageContext.forward("addrbook_edit_form.jsp");
+		}
 	}
 	else if(action.equals("update")) {
 	}
