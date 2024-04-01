@@ -17,10 +17,11 @@ public class AddrBean {
 	String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
 	String jdbc_url = "jdbc:oracle:thin:@127.0.0.1:1521";
 	 */
+
 	
 	/* MySQL 연결정보 */
 	String jdbc_driver = "com.mysql.jdbc.Driver";
-	String jdbc_url = " jdbc:mysql://127.0.0.1:3306/jsbdb";
+	String jdbc_url = "jdbc:mysql://127.0.0.1/jspdb?useSSL=false&serverTimezone=Asia/Seoul";
 	
 	// 데이터베이스 연결 메서드
 	void connect() {
