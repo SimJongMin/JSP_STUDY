@@ -5,6 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script language=JavaScript>
+	function delcheck() {
+		result = confirm("정말로 삭제하시겠습니까?");
+	if(result) {
+		document.form1.action.value="delete";
+		document.form1.submit();
+	}
+	else
+		return;
+	}
+</script>
 <link rel="stylesheet" href="addrbook.css" type="text/css" media="screen" />
 
 <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
