@@ -28,6 +28,7 @@
 <hr>
 [<a href="addrbook_list.jsp">주소록 목록으로</a>]<p>
 <form name=form1 method=post action=addrbook_control.jsp>
+<input type=hidden name="ab_id" value="<%=ab.getAb_id()%>">
 <input type=hidden name="action" value="update">
 
 <table border="1">
