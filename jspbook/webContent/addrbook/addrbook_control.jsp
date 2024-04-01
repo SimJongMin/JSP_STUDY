@@ -14,6 +14,7 @@
 	else if(action.equals("insert")) {
 		if (ab.insertDB(addrbook)) {
 			response.sendRedirect("addrbook_control.jsp?action=list");
+			//response.sendRedirect("addrbook_list.jsp?action=list"); 잠깐 페이지 이동 테스트
 		}
 		else
 			throw new Exception("DB 입력 오류");
@@ -43,5 +44,6 @@
 			throw new Exception("DB 삭제 오류");
 	}
 	else {
+		out.println("<script>alert('action 파라미터를 확인해 주세요!!!')</script>");
 	}
 %>
